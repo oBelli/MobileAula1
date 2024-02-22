@@ -8,9 +8,44 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
+        var numero01, numero02, resultado
+
+        function somar(){
+            numero01 = parseInt(document.getElementById('numero01').value)
+            numero02 = parseInt(document.getElementById('numero02').value)
+            resultado = numero01 + numero02
+            document.getElementById('visor').innerHTML = resultado}
+
+            function subtrair() {
+                numero01 = parseInt(document.getElementById('numero01').value)
+            numero02 = parseInt(document.getElementById('numero02').value)
+            resultado = numero01 - numero02
+            document.getElementById('visor').innerHTML = resultado
+            }
+
+            function multiplicar() {
+                numero01 = parseInt(document.getElementById('numero01').value)
+            numero02 = parseInt(document.getElementById('numero02').value)
+            resultado = numero01 * numero02
+            document.getElementById('visor').innerHTML = resultado
+            }
+
+            function dividir() {
+                numero01 = parseInt(document.getElementById('numero01').value)
+            numero02 = parseInt(document.getElementById('numero02').value)
+            resultado = numero01 / numero02
+            document.getElementById('visor').innerHTML = resultado
+            }
+        
     </script>
 </head>
-<body>
-	<h1>Olá Mundo</h1>
-</body>
+<body style="">
+	<h1>Calculadora</h1> <br>
+    <h2 id="visor"> </h2>
+    <input type="number" placeholder="Digite o Primeiro Numero" id=numero01>
+    <input type="number" placeholder="Digite o Segundo Numero" id=numero02> <br> <br>
+    <input type="button" value="SOMAR" onclick="somar()">
+    <input type="button" value="SUBTRAIR" onclick="subtrair()">
+    <input type="button" value="MULTIPLICAR" onclick="multiplicar()">
+    <input type="button" value="DIVIDIR" onclick="dividir()">
 </html>
